@@ -16,10 +16,9 @@ function sum(a, b) { //eslint-disable-line
     ]
     return returnArray;
 }
-
+ 
 // Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
-
+testSum(4, 7); 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -38,7 +37,6 @@ function multiply(a, b) { //eslint-disable-line
         total,
         "The product of 5 and 9 is 45."
     ];
-
     return returnArray;
 
 }
@@ -60,9 +58,24 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+    var totalSum = sum(sum(a,b)[0], c)[0];
+    var totalMulti = multiply(multiply(a,b)[0],c)[0];
+    var testSumAndMultiply = [
+        totalSum,
+        totalMulti,
+        "4 and 7 and 5 sum to 16.",
+        "The product of 4 and 7 and 5 is 140."
+    ]
+    console.log(totalMulti);
+    console.log(totalSum)
+    return testSumAndMultiply;
+
+    
 
 }
+testSumAndMultiply(4,7,5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
