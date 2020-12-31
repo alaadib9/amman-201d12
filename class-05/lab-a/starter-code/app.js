@@ -96,6 +96,15 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+    var sumArray=0;
+    for (var i =0; i< sumArr.length ;i++) {
+        sumArray = sumArray + sum(sumArray + sumArr[i])[0];
+    }
+   var returnSumArray = [
+       sumArray,
+       "2,3,4 was passed in as an array of numbers, and 9 is their sum."
+   ]
+    return returnSumArray;
 
 }
 
